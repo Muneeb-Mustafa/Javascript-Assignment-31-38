@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 31-38</title>
+    <!-- Bootsctrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="Styles/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+</head>
+<body>
+    <header id="bg">
+        <nav class="navbar navbar-expand-lg bg-body-primary bg-primary" >
+            <div class="container">
+              <a class="navbar-brand text-white" href="#">Assignments</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active text-white" aria-current="page" href="#">Chapter 31-38</a>
+                  </li>              
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn text-white btn-outline-light bg-primary" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <main>
+        <div class="container py-5 text-center">
+            <div class="row">
+                <div class="col">
+                    <h3>Chapter # 31-38 | Date and Time, Functions: Passing them data and get data from them</h3>
+                </div>
+                <div class="divider"></div>
+            </div>
+        </div>
+        <div class="container my-2">
+            <div class="row">
+              <div class="col-md-12 col-lg-6 p-4">
+                <h3 class="text-center">Input</h3>
+                <div class="input-group mb-3 border border-black rounded-1 p-4">
+                  <input type="datetime-local" class="form-control" id="input" placeholder="Type your text here" aria-label="default input example">
+                  <button type="button" class="btn btn-outline-primary rounded-0" id = "clear_input" onclick="clear0()">Clear</button>
+                </div>
+              </div>
+              <div class="col-md-12 col-lg-6 ms-md-auto p-4">
+                <h3 class="text-center">Current Date and Time</h3>
+                <div class="original p-4 rounded-2 text-white text-center bg-primary">
+                   <h6>Thu Apr 25 2024 17:15:29 GMT+0500 (Pakistan Standard Time)</h6>
+                   
+                </div>
+              </div>
+            </div>
+
+            <div class="container text-center mt-3">
+                <div class="row">
+                  <div class="col-md-6">
+                    <h4>Buttons</h4>
+                    <div class="row d-flex justify-content-center border border-black p-4 rounded-2">
+                      <div class="col-sm-6 mb-3">
+                        <button class="btn btn-danger w-100" onclick="getName()">Get Name of Today</button>
+                      </div>
+                      <div class="col-sm-6 mb-3">
+                        <button class="btn btn-danger w-100"  onclick="CalculateDays()">Calculate Days Passed since I born</button>
+                      </div>
+                      <div class="col-sm-6 mb-3">
+                        <button class="btn btn-danger w-100" onclick="nextBirthday()">What is your next Birthday?</button>
+                      </div>
+                      <div class="col-sm-6 mb-3">
+                        <button class="btn btn-danger w-100" onclick="greetingUser()">Greet User</button>
+                      </div>
+                      <div class="col-sm-6 mb-3">
+                        <button class="btn btn-danger w-100" id="Print_Cities" onclick = "tellTime1()">Tell Time 1</button>
+                      </div>
+                      <div class="col-sm-6 mb-3">
+                        <button class="btn btn-danger w-100" onclick="tellTime2()">Tell Time 2</button>
+                      </div>
+                      <div class="col-sm-6 mb-3">
+                        <button class="btn btn-danger w-100" onclick="tellTime3()">Tell Time 3</button>
+                      </div>
+                      <div class="col-sm-6 mb-3">
+                        <button class="btn btn-danger w-100" onclick="calculateTaxbtn()">Calculate Tax</button>
+                      </div>
+                      <div class="col-sm-6 mb-3">
+                        <button class="btn btn-danger w-100" onclick="calculateTotal()">Calculate Total = Price + Tax</button>
+                      </div>
+                    </div>             
+                  </div>
+                    
+                    <div class="col-md-6">
+                      <h4>Output/Result</h4>
+                      <div class="output-container">
+                        <div class="scrollbar" id="resultContainer">
+                          <p class="border border-black p-5 rounded-2" id="result" style="height: 320px; overflow-y: auto;"></p>
+                        </div>
+                      </div>
+                      <button type="button" class="btn btn-outline-primary m-3" id="clear_output" onclick="clear1()">Clear Result</button>
+                    </div>
+                    
+                  
+    </main>
+    <footer>
+        <div class="row bg-primary text-white pt-2">
+            <div class="col">
+                <p class="text-center">&copy; 2024. <b>Assignments By <a href="#" class="text-decoration-none text-light">www.muneeb.net</a></b></p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+   
+
+</body>
+</html>
